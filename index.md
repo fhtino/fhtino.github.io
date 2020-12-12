@@ -1,5 +1,7 @@
 ---
-layout: home
+layout: default
 ---
 homepage   
-![traccia](traccia.jpg)
+![traccia](traccia.jpg)  
+
+[mappa](map.html)   

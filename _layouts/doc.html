@@ -1,0 +1,18 @@
+---
+layout: default
+---
+<h1>Docs</h1>
+
+<div>
+    NAVIGATION:
+    {% assign urltokens = page.dir | split: "/" %}
+    {% assign navurl = "/" %}
+    {% for token in urltokens %}
+    {% if token != "" %}
+    {% assign navurl = navurl | append: token | append: "/" %}
+    / <a href="{{navurl}}">{{token}}</a>
+    {% endif %}
+    {% endfor %}
+</div>
+
+{{ content }}
