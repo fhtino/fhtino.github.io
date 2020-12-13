@@ -15,3 +15,4 @@ layout: default
 [Leaflet example map](demo/leafletmap.html)   
 
 [Notes](notes/)
+
