@@ -1,9 +1,8 @@
 ---
 layout: default
 ---
-<h1>Docs</h1>
 
-<div style="background-color:#ebebeb; padding:5px;">    
+<div style="background-color:#ebebeb; padding:5px; margin-bottom:20px;">    
     {% assign urltokens = page.dir | split: "/" %}
     {% assign navurl = "/" %}
     {% for token in urltokens %}
@@ -11,7 +10,7 @@ layout: default
     {% assign navurl = navurl | append: token | append: "/" %}
     / <a href="{{navurl}}">{{token}}</a>
     {% endif %}
-    {% endfor %}
+    {% endfor %}    
 </div>
 
 {{ content }}

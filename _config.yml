@@ -1,6 +1,6 @@
 theme: minima
 title: fhtino
 show_downloads: false
-author:
-  name: fhtino
-  email: me@localhost
+author:  
+  www: https://www.fhtino.it
+not_used_permalink: pretty

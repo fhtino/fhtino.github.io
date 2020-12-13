@@ -1,5 +1,5 @@
 ---
-layout: doc
+layout: notes
 ---
 # Deployment notes
 
