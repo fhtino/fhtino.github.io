@@ -21,8 +21,8 @@ $border-color-03:       $brand-color-dark !default;
 $table-text-color:      lighten($text-color, 18%) !default;
 $table-zebra-color:     lighten($brand-color, 46%) !default;
 $table-header-bg-color: lighten($brand-color, 43%) !default;
-$table-header-border:   lighten($brand-color, 37%) !default;
-$table-border-color:    $border-color-01 !default;
+$table-header-border:   $brand-color;  //lighten($brand-color, 37%) !default;
+$table-border-color:    $brand-color;  //$border-color-01 !default;
 
 
 // Syntax highlighting styles should be adjusted appropriately for every "skin"

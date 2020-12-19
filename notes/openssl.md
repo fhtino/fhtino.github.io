@@ -2,8 +2,8 @@
 layout: notes
 ---
 
-| | |
-| - | - |
+|  |  |
+| -- | -- |
 | cer --> pfx without private key  | openssl pkcs12 -export -nokeys -in certificate.cer -out pkcs12.pfx |
 | get info about server certificates |  s_client -showcerts -servername www.google.com -connect www.google.com:443 |
 
