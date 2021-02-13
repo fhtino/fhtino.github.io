@@ -1,0 +1,12 @@
+<!-- top-bar -->
+<div style="background-color:#ebebeb; padding:5px; margin-bottom:5px;">
+    <a href="/">home</a>
+    {% assign urltokens = page.dir | split: "/" %}
+    {% assign navurl = "/" %}
+    {% for token in urltokens %}
+    {% if token != "" %}
+    {% assign navurl = navurl | append: token | append: "/" %}
+    / <a href="{{navurl}}">{{token}}</a>
+    {% endif %}
+    {% endfor %}
+</div>

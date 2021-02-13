@@ -2,7 +2,7 @@
 layout: notes_index
 ---
 
-<h1>Index</h1>
+<h1>my notes</h1>
 
  
 

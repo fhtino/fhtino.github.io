@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: notes_index
 ---
 
 <div style="text-align: center;">
@@ -10,9 +10,4 @@ layout: default
 <br/>
 <br/>
 </div>
-
-
-[Leaflet example map](demo/leafletmap.html)   
-
-[Notes](notes/)
 
