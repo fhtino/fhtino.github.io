@@ -1,5 +1,5 @@
 ---
-layout: notes_index
+layout: default
 ---
 
 <div style="text-align: center;">
@@ -11,3 +11,7 @@ layout: notes_index
 <br/>
 </div>
 
+<div style="text-align:center; margin-top:50px;">
+    <span style="background-color:lightblue; padding:20px;"><a href="/notes">My notes</a></span>
+    <span style="background-color:lightblue; padding:20px;"><a href="/demo">Demo</a></span>
+</div>

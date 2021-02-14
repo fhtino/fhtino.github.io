@@ -1,5 +1,5 @@
 ---
-layout: notes_index
+layout: default
 ---
 
 [Leaflet example map](leafletmap.html)   

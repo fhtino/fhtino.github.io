@@ -2,7 +2,7 @@ theme: minima
 title: fhtino notes
 show_downloads: false
 author:  
-  www: https://www.fhtino.it
+  www__donotshow: https://www.fhtino.it  
 not_used_permalink: pretty
 minima:
   skin: classic
