@@ -5,14 +5,16 @@ layout: notes
 {{ content }}
 
 
-<br/>
+<br />
 
 {% assign base_url = page.url  %}
 {% assign sorted_pages = site.pages | sort:"url" %}
- assign notes_pages = sorted_pages | where_exp:"item","item.layout=='notes_index' or item.layout=='notes'"  
+
+<!-- this does not work with GitHub pages -->
+<!--assign notes_pages = sorted_pages | where_exp:"item", "item.layout=='notes_index' or item.layout=='notes'"--> 
 
 <ul>
-    {% for node in notes_pages  %}
+    {% for node in sorted_pages  %}
     {% if node.url contains base_url %}
     <li>
         <a href="{{node.url}}">{{node.url}}</a>
