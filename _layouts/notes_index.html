@@ -11,7 +11,7 @@ layout: notes
 {% assign sorted_pages = site.pages | sort:"url" %}
 
 <!-- this does not work with GitHub pages -->
-<!--assign notes_pages = sorted_pages | where_exp:"item", "item.layout=='notes_index' or item.layout=='notes'"--> 
+<!-- assign notes_pages = sorted_pages | where_exp:"item", "item.layout=='notes_index' or item.layout=='notes'" --> 
 
 <ul>
     {% for node in sorted_pages  %}
