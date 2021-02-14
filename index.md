@@ -11,7 +11,9 @@ layout: default
 <br/>
 </div>
 
+
 <div style="text-align:center; margin-top:50px;">
     <span style="background-color:lightblue; padding:20px;"><a href="/notes">My notes</a></span>
     <span style="background-color:lightblue; padding:20px;"><a href="/demo">Demo</a></span>
 </div>
+
