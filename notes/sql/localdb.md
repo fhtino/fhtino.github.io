@@ -1,7 +1,7 @@
 ---
 layout: notes
 ---
-# Sql Server LocalBD
+# Sql Server LocalDB
 ## Switching from an old to a newer version
 
 By default LocalDB instance has the name **MSSQLLocalDB** and you can connect to using the standard name-server syntax:  **(localdb)\mssqllocaldb**  In my case, SSMS shows that my version is 13.1.4001.0.  
