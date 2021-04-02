@@ -2,6 +2,8 @@
 layout: notes
 ---
 
+# Azure Functions misc
+<br/>
 
 ## FunctionsStartup 
 Steps:
@@ -31,6 +33,43 @@ namespace BasicFunctions
 Details: https://docs.microsoft.com/en-us/azure/azure-functions/functions-dotnet-dependency-injection
 
 
+## Upgrade from V2 to V3
+
+In Visual Studio, update version and references inside project file.
+
+From:
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <AzureFunctionsVersion>v2</AzureFunctionsVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="1.0.38" />
+  </ItemGroup>
+```
+
+To:
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AzureFunctionsVersion>v3</AzureFunctionsVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="3.0.11" />
+  </ItemGroup>
+```
+<br/>
+
+When you deploy from Visual Studio, a warning appears. Click "yes".
+![functions_v2_to_v3](imgs/functions_v2_to_v3_001.png)
+
+Verify that FUNCTIONS_EXTENSION_VERSIONS is correctly set.
+![functions_v2_to_v3](imgs/functions_v2_to_v3_002.png)
+
+Verify that current runtime version is V3:
+![functions_v2_to_v3](imgs/functions_v2_to_v3_003.png)
 
 
 ## CORS
