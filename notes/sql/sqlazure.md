@@ -18,3 +18,11 @@ WHERE IDX.is_primary_key = 1
 ORDER BY OBJ.name
 ```
 
+## Clear plan cache
+Like the "old" DBCC FREEPROCCACHE
+
+```sql
+select count(*) from sys.dm_exec_cached_plans;
+ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE;
+select count(*) from sys.dm_exec_cached_plans;
+```
