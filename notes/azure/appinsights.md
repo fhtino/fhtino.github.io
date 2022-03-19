@@ -1,0 +1,36 @@
+---
+layout: notes
+---
+
+### Setup of sampling in Azure functions
+
+**[[Tests done running Function locally on Visual Studio]]**
+
+```json
+  "logging": {
+    "applicationInsights": {
+      "enablePerformanceCountersCollection": false,
+      "samplingSettings": {
+        "isEnabled": true,
+        "evaluationInterval": "00:00:10",
+        "maxTelemetryItemsPerSecond": 2,
+        "samplingPercentageDecreaseTimeout": "00:00:05",
+        "samplingPercentageIncreaseTimeout": "00:00:05",
+        "includedTypes": "Request"
+      }
+    }
+  }
+```
+
+Important points:
+ - maxTelemetryItemsPerSecond : the maximum number of Requests sent to Application Insights service when sampling is active. (see below)
+ - samplingPercentageDecreaseTimeout and samplingPercentageIncreaseTimeout should be set to a low value, like 5 seconds. The default, 2 and 15 minutes, are too high. Low values allow the sampling algorithm to activate faster.
+ - if you activate Request exclusion i.e. "excludedTypes": "Request"  the sampling will not work. This is because all activities in Azure Functions are requests.
+ - "includedTypes": "Request" is not strictly required because it's the default. However, a more declarative config is better IMHO. 
+ - disable performance counters if not really required --> "enablePerformanceCountersCollection": false
+ - it's possible to fix a max and min sampling level with options maxSamplingPercentage and minSamplingPercentage
+ - when running Functions on local emulator, it shows the application insights setup running values in the logs before starting the functions. This is usefull to check the real values used.
+
+<br/>
+<br/>
+
