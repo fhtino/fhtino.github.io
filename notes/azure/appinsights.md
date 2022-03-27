@@ -34,3 +34,22 @@ Important points:
 <br/>
 <br/>
 
+### Sampling with Asp.Net (.NET Framework)
+
+- Got to: App Service --> Kudu --> Debug console --> /site/wwwroot/
+- Edit ApplicationInsights.config
+- Add / edit the following section:
+```xml
+<!-- 4% sample fixed rate with a max of 5 items (i.e. requests) per seconds -->
+<Add Type="Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.AdaptiveSamplingTelemetryProcessor, Microsoft.AI.ServerTelemetryChannel">
+  <MaxTelemetryItemsPerSecond>5</MaxTelemetryItemsPerSecond>
+  <InitialSamplingPercentage>4</InitialSamplingPercentage>
+  <MinSamplingPercentage>4</MinSamplingPercentage>
+  <MaxSamplingPercentage>4</MaxSamplingPercentage>
+</Add>
+```
+ - Save and restart the app service
+ 
+ 
+
+
