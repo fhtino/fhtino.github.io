@@ -2,7 +2,9 @@
 layout: notes
 ---
 
-### Setup of sampling in Azure functions
+## Sampling
+
+### Sampling in in Azure functions
 
 **[[Tests done running Function locally on Visual Studio]]**
 
@@ -34,12 +36,13 @@ Important points:
 <br/>
 <br/>
 
-### Sampling with Asp.Net (.NET Framework)
+### Sampling in Asp.Net - .NET Framework
 
 - Got to: App Service --> Kudu --> Debug console --> /site/wwwroot/
 - Edit ApplicationInsights.config
 - Add / edit the following section:
-```xml
+
+```
 <!-- 4% sample fixed rate with a max of 5 items (i.e. requests) per seconds -->
 <Add Type="Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.AdaptiveSamplingTelemetryProcessor, Microsoft.AI.ServerTelemetryChannel">
   <MaxTelemetryItemsPerSecond>5</MaxTelemetryItemsPerSecond>
@@ -51,5 +54,21 @@ Important points:
  - Save and restart the app service
  
  
+## Availability - web monitoring 
+
+**Standard (preview) tests**
+
+```
+az monitor app-insights web-test list
+az monitor app-insights web-test list --output table
+az monitor app-insights web-test show --resource-group Monitoring --name httpscheck-xxxxx-httpmonitoring
+az monitor app-insights web-test update --resource-group Monitoring --name httpscheck-xxxxx-httpmonitoring --timeout=10
+```
+
+
+
+
+
+
 
 
