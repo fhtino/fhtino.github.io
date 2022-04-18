@@ -51,3 +51,27 @@ select count(*) from sys.dm_exec_cached_plans;
 ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE;
 select count(*) from sys.dm_exec_cached_plans;
 ```
+
+## Error importing Azure Bacpac into local sql server
+
+If case of errors like this:
+```
+Warning SQL72012: The object [XXXXX_Data] exists in the target, but it will not be dropped...
+Warning SQL72012: The object [XXXXX_Log]  exists in the target, but it will not be dropped... 
+Error SQL72014: .Net SqlClient Data Provider: Msg 12824, Level 16, State 1, Line 5 The sp_configure value 
+                'contained database authentication' must be set to 1 in order to alter a contained database.  
+		You may need to use RECONFIGURE to set the value_in_use.
+Error SQL72045: Script execution error.  The executed script:
+```
+
+run this on the target sql server - master database:
+
+```sql
+sp_configure 'contained database authentication', 1;  
+GO  
+RECONFIGURE;  
+GO
+```
+
+
+
