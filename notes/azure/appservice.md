@@ -6,4 +6,6 @@ layout: notes
 
 ## Logs
 
-...
+Details here: https://docs.microsoft.com/en-us/azure/app-service/troubleshoot-diagnostic-logs  
+
+
