@@ -62,13 +62,13 @@ To:
 ```
 <br/>
 
-When you deploy from Visual Studio, a warning appears. Click "yes".
+When you deploy from Visual Studio, a warning appears. Click "yes".  
 ![functions_v2_to_v3](imgs/functions_v2_to_v3_001.png)
 
-Verify that FUNCTIONS_EXTENSION_VERSIONS is correctly set.
+Verify that FUNCTIONS_EXTENSION_VERSIONS is correctly set.  
 ![functions_v2_to_v3](imgs/functions_v2_to_v3_002.png)
 
-Verify that current runtime version is V3:
+Verify that current runtime version is V3:  
 ![functions_v2_to_v3](imgs/functions_v2_to_v3_003.png)
 
 
