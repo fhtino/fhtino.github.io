@@ -18,3 +18,4 @@ Details here: https://docs.microsoft.com/en-us/azure/app-service/troubleshoot-di
 
 *1 : file system output : auto turns off in 12 hours.  Blob storage: no auto turn-off
 
+<br/>
