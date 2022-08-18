@@ -73,6 +73,16 @@ Compile and deploy the function running on .Net 6
 <br/>
 
 
+## Notes
+
+After upgrading to V4, if the running function is using old extensions, you could get an error like the following. In such a case, the app function does not start. To solve, upgrade the old referenced extensions and redeploy.  
+  
+![functions_v3_to_v4](imgs/functions_v3_to_v4_001.png)
+
+
+<br/> 
+<br/>
+
 
 # References
 
