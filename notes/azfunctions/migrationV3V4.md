@@ -61,8 +61,8 @@ az functionapp config set --net-framework-version v6.0 --name functName --resour
 ```
 
 Notes:
- - consider to stop the function during the upgrade
- - running previous .Net 3.1 function on V4, without upgrading to .net 6, generate a warning on Azure portal --> Function --> Function runtime settins: "Your app is pinned to an unsupported runtime version fro 'dotnet'. For bettere performance we reccomend using one of our supported versions instead: ~3."
+ - consider stopping the function during the upgrade
+ - running .Net 3.1 function on V4, without upgrading to .Net 6, generates a warning on Azure portal --> Function --> Function runtime settins: "Your app is pinned to an unsupported runtime version fro 'dotnet'. For better performance we reccomend using one of our supported versions instead: ~3."
 <br/>
 <br/>
 
