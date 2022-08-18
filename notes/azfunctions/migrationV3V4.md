@@ -4,7 +4,7 @@ layout: notes
 
 # Upgrading Function from V3 to V4
 
-Microsoft accounced the 3 December 2022 deadline for migrating Azure functions from V3 to V4.
+Microsoft announced the 3 December 2022 as the deadline for migrating Azure functions from V3 to V4.
 
 Migrating an existig function from V3 (.Net Core 3.1) to V4 (.Net Core 6) requires 3 macro steps:
  - upgrade VS project
