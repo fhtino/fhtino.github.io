@@ -45,3 +45,33 @@ ip address
     inet6 XXXXXXXXXXXXXXXX/64 scope link
        valid_lft forever preferred_lft forever
 ```
+
+## Wait for a host to be available
+
+```shell
+#!/bin/bash
+
+CheckIsAlive () {
+  # $1 : hostname or ip address
+  # $2 : tcp port
+  # $3 : max number of retries
+  # $4 : sleep between retries
+  # $5 : nc timeout
+
+  echo "start"
+  echo $1 $2 $3 $4 $5
+  counter_is_alive=0
+
+  while [ $counter_is_alive -lt $3 ];
+  do
+    echo "Counter: $counter_is_alive"
+    nc -zvw$5 $1 $2
+    if [ $? -eq 0 ]; then counter_is_alive=$3; else sleep $4; fi
+    let counter_is_alive=counter_is_alive+1
+  done
+
+  echo "end"
+}
+
+CheckIsAlive www.google.com 443 10 5 2
+```
