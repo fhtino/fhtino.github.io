@@ -3,6 +3,12 @@ layout: notes
 ---
 # sql misc
 
+## xact_abort
+
+```sql
+SET xact_abort ON
+```
+
 ## Update statistics on all tables
 
 ```sql

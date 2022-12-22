@@ -16,3 +16,13 @@ Console.WriteLine(Convert.ToHexString(SHA256.Create().ComputeHash(Convert.FromBa
 
 [1] https://docs.microsoft.com/en-us/azure/storage/tables/monitor-table-storage-reference#resource-logs
 
+
+## Prices
+
+Carefully consider the different prices of storage account V1 and V2. If you don't need V2, consider using V1. In particular when you have many transactions.  Example below: same application, same number of transactions per day, storage changed from V2 to V1.
+  
+![](imgs/storage_v1_v2_transactions.png)
+  
+![](imgs/storage_v1_v2_price.png)
+
+
