@@ -17,25 +17,25 @@ layout: notes
     {% for node in sorted_pages  %}
     {% if node.url contains base_url %}
     <li>
-        <a href="{{node.url}}">{{node.url}} : {{node.title}} {{node.date}} - {{node.tags}}</a>
-        {% for tag in node.tags %}
-        T: {{tag}}
-        {% endfor  %}
+        <a href="{{node.url}}">{{node.title}}</a>
     </li>
     {% endif %}
     {% endfor %}
 </ul>
 
-<hr />
-<hr />
+<br />
+<br />
+<br />
 
-<table>
-    {% for node in sorted_pages  %}
-    {% if node.url contains base_url %}
-    <tr>
-        <td style="width:1%;" ><span style="font-size:smaller;"><a href="{{node.url}}">{{node.url}}  </a></span></td>
-        <td><a href="{{node.url}}">{{node.title}}  </a></td>       
-    </tr>
-    {% endif %}
-    {% endfor %}
-</table>
+<div style="font-size:smaller;">
+    <table>
+        {% for node in sorted_pages  %}
+        {% if node.url contains base_url %}
+        <tr>
+            <td style="padding:3px; width:1%;"><a href="{{node.url}}">{{node.url}}  </a></td>
+            <td style="padding:3px;"><a href="{{node.url}}">{{node.title}}  </a></td>
+        </tr>
+        {% endif %}
+        {% endfor %}
+    </table>
+</div>

@@ -2,7 +2,7 @@
 layout: notes
 ---
 
-# Upgrading Function from V3 to V4
+# Upgrading Azure Function from V3 to V4
 
 Microsoft announced the 3 December 2022 as the deadline for migrating Azure functions from V3 to V4.
 

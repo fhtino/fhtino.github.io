@@ -1,11 +1,11 @@
 ---
 layout: notes
 ---
-# Deployment notes
+# Azure functions - Deployment notes
 
 [*** DRAFT ***]
 
-There are different ways of deploying Azure Functions:
+There are different ways for deploying Azure Functions:
  - deploy from Visual Studio : WebDeploy OR ZipDeploy
  - deploy from Azure DevOps : ZipDeploy
  - other...

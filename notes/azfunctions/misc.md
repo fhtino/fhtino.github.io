@@ -2,7 +2,7 @@
 layout: notes
 ---
 
-# Azure Functions misc
+# Azure Functions - misc
 <br/>
 
 ## FunctionsStartup 
