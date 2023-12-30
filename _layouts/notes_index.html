@@ -11,15 +11,31 @@ layout: notes
 {% assign sorted_pages = site.pages | sort:"url" %}
 
 <!-- this does not work with GitHub pages -->
-<!-- assign notes_pages = sorted_pages | where_exp:"item", "item.layout=='notes_index' or item.layout=='notes'" --> 
+<!-- assign notes_pages = sorted_pages | where_exp:"item", "item.layout=='notes_index' or item.layout=='notes'" -->
 
 <ul>
     {% for node in sorted_pages  %}
     {% if node.url contains base_url %}
     <li>
-        <a href="{{node.url}}">{{node.url}}</a>
+        <a href="{{node.url}}">{{node.url}} : {{node.title}} {{node.date}} - {{node.tags}}</a>
+        {% for tag in node.tags %}
+        T: {{tag}}
+        {% endfor  %}
     </li>
     {% endif %}
     {% endfor %}
 </ul>
 
+<hr />
+<hr />
+
+<table>
+    {% for node in sorted_pages  %}
+    {% if node.url contains base_url %}
+    <tr>
+        <td style="width:1%;" ><span style="font-size:smaller;"><a href="{{node.url}}">{{node.url}}  </a></span></td>
+        <td><a href="{{node.url}}">{{node.title}}  </a></td>       
+    </tr>
+    {% endif %}
+    {% endfor %}
+</table>

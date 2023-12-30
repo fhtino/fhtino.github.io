@@ -4,5 +4,6 @@ show_downloads: false
 author:  
   www_do_no_show: https://www.fhtino.it  
 not_used_permalink: pretty
+permalink: /:title/
 minima:
   skin: classic
